@@ -13,6 +13,8 @@ import {
   loadCSS,
 } from './aem.js';
 
+import { loadFavicon } from '../utils/favicon.js';
+
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
@@ -129,6 +131,7 @@ function loadDelayed() {
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
+  loadFavicon();
   loadDelayed();
 }
 
