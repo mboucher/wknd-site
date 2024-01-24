@@ -148,8 +148,8 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  width: auto;
+  height: 40px;
 }
 
 /* sections */
@@ -225,6 +225,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
+    flex-direction: row-reverse;
     gap: 2em;
     margin: 0;
     font-size: var(--body-font-size-xs);

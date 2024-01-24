@@ -1,3 +1,7 @@
+.cards {
+  padding-top:50px;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -8,12 +12,13 @@
 }
 
 .cards > ul > li {
-  border: 1px solid var(--dark-color);
   background-color: var(--background-color)
 }
 
+
 .cards .cards-card-body {
   margin: 16px;
+  text-transform: uppercase;
 }
 
 .cards .cards-card-image {
@@ -22,7 +27,15 @@
 
 .cards .cards-card-body > *:first-child {
   margin-top: 0;
+  font-size: medium;
+  font-weight: bolder;
 }
+
+.cards .cards-card-body > *:last-child {
+  margin-top: 0;
+  font-size: small;
+}
+
 
 .cards > ul > li img {
   width: 100%;

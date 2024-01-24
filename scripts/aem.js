@@ -424,6 +424,18 @@ function decorateIcons(element, prefix = '') {
 }
 
 /**
+ * Decorates h2 elements to include sibling div used for underlines
+ * @param {Element} main The container element
+ */
+function decorateHeading2(main) {
+  main.querySelectorAll('h2').forEach((heading) => {
+    const line = document.createElement('div');
+    line.classList.add('heading-line');
+    heading.parentElement.insertBefore(line, heading.nextSibling);
+  });
+}
+
+/**
  * Decorates all sections in a container element.
  * @param {Element} main The container element
  */
@@ -691,6 +703,7 @@ export {
   decorateIcons,
   decorateSections,
   decorateTemplateAndTheme,
+  decorateHeading2,
   fetchPlaceholders,
   getMetadata,
   loadBlock,

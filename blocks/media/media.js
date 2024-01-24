@@ -10,8 +10,11 @@
  * governing permissions and limitations under the License.
  */
 
-import { createTag } from "../../utils/utils";
+import { createTag } from '../../utils/utils.js';
 
 export default async function decorate(block) {
-    // const 
+  const text = block.querySelector('p');
+  text.classList.add('article-summary');
+  const spacer = createTag('div', { class: 'article-spacer' });
+  text.parentNode.insertBefore(spacer, text.nextSibling);
 }

@@ -10,8 +10,14 @@
  * governing permissions and limitations under the License.
  */
 
-import { createTag } from "../../utils/utils";
+import { createTag } from '../../utils/utils.js';
 
 export default async function decorate(block) {
-    // const 
+  const container = block.querySelector('div > div:nth-child(2)');
+  const formContainer = createTag('form');
+  const input = createTag('input', { class: 'email', placeholder: 'YOUR EMAIL ADDRESS' });
+  const submit = createTag('input', { class: 'submit', type: 'button', value: 'Sign up' });
+  formContainer.append(input);
+  formContainer.append(submit);
+  container.append(formContainer);
 }

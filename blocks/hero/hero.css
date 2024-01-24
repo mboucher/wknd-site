@@ -8,15 +8,16 @@ main .hero-container {
 
 .hero {
   position: relative;
-  padding: 32px;
-  min-height: 300px;
+  min-height: 640px;
+  margin-bottom: 70px;
 }
 
 .hero h1 {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: serif;
+  font-weight: 100;
 }
 
 .hero picture {
@@ -27,8 +28,52 @@ main .hero-container {
   box-sizing: border-box;
 }
 
+
+.hero a.button:any-link, button {
+  font-family: var(--body-font-family);
+  font-size: medium;
+  display: inline-block;
+  font-weight: 400;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  padding: 5px 30px;
+  text-align: center;
+  font-style: normal;
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: #FFEB00;
+  margin: 16px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0;
+}
+
+.hero a.button:hover, button:focus, a.button:focus, button:hover  {
+  background-color: #FCF073;
+  cursor: pointer;
+}
+
 .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.hero > div:nth-child(2) {
+  display: flex;
+  min-height: 640px;
+  align-items: end;
+}
+
+.hero > div:nth-child(2) > div {
+  max-width: 1300px;
+  max-height: 246px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
 }
