@@ -17,5 +17,10 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  const links = footer.querySelector('ul');
+  const spacer = document.createElement('div');
+  spacer.classList.add('footer-spacer');
+  links.parentNode.insertBefore(spacer, links);
+
   block.append(footer);
 }

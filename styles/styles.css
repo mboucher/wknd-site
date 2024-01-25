@@ -20,8 +20,8 @@
   --text-color: black;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: source-sans-pro, sans-serif;
+  --heading-font-family: source-serif-pro, serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
